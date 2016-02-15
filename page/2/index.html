@@ -44,7 +44,7 @@
 <meta name="description" content="小小小菜鸟一枚">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Coword's Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Coword's Blog">
 <meta property="og:description" content="小小小菜鸟一枚">
 <meta name="twitter:card" content="summary">
@@ -59,7 +59,7 @@
   };
 </script>
 
-  <title> 归档 | Coword's Blog </title>
+  <title> Coword's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -77,7 +77,9 @@
 
 
 
-  <div class="container one-column  page-archive ">
+  <div class="container one-column 
+   page-home 
+">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -174,60 +176,105 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content"> 
-
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 3 篇日志。 继续努力。
-    </span>
-
+  <section id="posts" class="posts-expand">
     
-
-      
-      
       
 
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal"itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/02/15/hello-world/" itemprop="url">
-              <span itemprop="name">Hello World</span>
-            </a>
-        
-      </h1>
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              <a class="post-title-link" href="/2015/11/01/Linux搭建git服务器/" itemprop="url">
+                linux搭建git服务器
+              </a>
+            
+          
+        </h1>
+      
 
       <div class="post-meta">
-        <time class="post-time" datetime="2016-02-15T02:43:11.795Z" itemprop="dateCreated" content="2016-02-15"> 02-15 </time>
-      </div>
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-01T00:00:00+08:00" content="2015-11-01">
+            2015-11-01
+          </time>
+        </span>
 
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/服务器/" itemprop="url" rel="index">
+                  <span itemprop="name">服务器</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2015/11/01/Linux搭建git服务器/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/01/Linux搭建git服务器/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
     </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p><strong>操作系统：Ubuntu 14.04</strong><br><strong>软件：git</strong></p>
+<h4 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.     安装git"></a>1.     安装git</h4><figure class="highlight actionscript"><table><tr><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> install git</span><br></pre></td></tr></table></figure>
+<h4 id="2-创建git用户（运行git服务）"><a href="#2-创建git用户（运行git服务）" class="headerlink" title="2. 创建git用户（运行git服务）"></a>2. 创建git用户（运行git服务）</h4><figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line">$ sudo <span class="keyword">adduser </span>git</span><br></pre></td></tr></table></figure>
+<h4 id="3-创建登录凭证"><a href="#3-创建登录凭证" class="headerlink" title="3.     创建登录凭证"></a>3.     创建登录凭证</h4><figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 切换git用户</span></span><br><span class="line">$ su git</span><br><span class="line"><span class="comment"># 创建.ssh目录</span></span><br><span class="line">$ mkdir <span class="pi">/home/git/</span>.ssh</span><br><span class="line"><span class="comment"># 生成git用户的公钥和密钥 </span></span><br><span class="line">$ cd <span class="pi">/home/git/</span>.ssh</span><br><span class="line">$ ssh-keygen</span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> which <span class="keyword">to</span> save the key (<span class="pi">/home/git/</span>.ssh/id_rsa):</span><br><span class="line">Created directory <span class="string">'/home/git/.ssh'</span>.</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> <span class="literal">no</span> passphrase):</span><br><span class="line">Enter same passphrase <span class="attribute">again</span>:</span><br><span class="line">Your identification has been saved <span class="keyword">in</span> <span class="pi">/home/git/</span>.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> <span class="pi">/home/git/</span>.ssh/id_rsa.pub.</span><br></pre></td></tr></table></figure>
+<h4 id="4-初始化Git仓库"><a href="#4-初始化Git仓库" class="headerlink" title="4. 初始化Git仓库"></a>4. 初始化Git仓库</h4><figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>mkdir work</span><br><span class="line"><span class="variable">$ </span>cd work</span><br><span class="line"><span class="variable">$ </span>mkdir project.git</span><br><span class="line"><span class="variable">$ </span>cd project.git</span><br><span class="line"><span class="comment"># 使用--bare会初始化一个不带任何工作目录的仓库</span></span><br><span class="line"><span class="variable">$ </span>git --bare init</span><br><span class="line"><span class="comment"># 修改project.git权限</span></span><br><span class="line"><span class="variable">$ </span>cd ..</span><br><span class="line"><span class="variable">$ </span>sudo chown -<span class="constant">R</span> <span class="symbol">git:</span>git project.git</span><br></pre></td></tr></table></figure>
+<h4 id="5-禁用shell登录"><a href="#5-禁用shell登录" class="headerlink" title="5.禁用shell登录"></a>5.禁用shell登录</h4><p>出于安全考虑，设置git用户不允许登录shell，只能通过ssh使用git.可通过修改/etc/passwd文件完成。找到下面的一行：<br><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="symbol">git:</span><span class="symbol">x:</span><span class="number">1001</span><span class="symbol">:</span><span class="number">1001</span><span class="symbol">:</span>,,,<span class="symbol">:/home/git</span><span class="symbol">:/bin/bash</span></span><br></pre></td></tr></table></figure></p>
+<p>改为：<br><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="symbol">git:</span><span class="symbol">x:</span><span class="number">1001</span><span class="symbol">:</span><span class="number">1001</span><span class="symbol">:</span>,,,<span class="symbol">:/home/git</span><span class="symbol">:/usr/bin/git-shell</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="6-开发端"><a href="#6-开发端" class="headerlink" title="6.开发端"></a>6.开发端</h4><p>在开发端生成公钥，并将公钥(id_rsa.pub)导入git服务器<br><figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成公钥</span></span><br><span class="line"><span class="variable">$ </span>ssh-keygen</span><br><span class="line"><span class="comment"># 导入公钥（假设已拷贝到服务器/tmp）</span></span><br><span class="line"><span class="variable">$ </span>cat /tmp/id_rsa.pub &gt;&gt; <span class="regexp">/home/git</span><span class="regexp">/.ssh/id</span>_rsa.pub</span><br></pre></td></tr></table></figure></p>
+<h4 id="7-测试"><a href="#7-测试" class="headerlink" title="7.测试"></a>7.测试</h4><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>mkdir test</span><br><span class="line"><span class="variable">$ </span>cd test</span><br><span class="line"><span class="variable">$ </span>git init</span><br><span class="line"><span class="comment"># 将所有文件加入仓库管理</span></span><br><span class="line"><span class="variable">$ </span>git add . </span><br><span class="line"><span class="variable">$ </span>git commit -m <span class="string">"initial commit"</span></span><br><span class="line"><span class="variable">$ </span>git remote add origin git<span class="variable">@192</span>.<span class="number">168.1</span>.<span class="number">200</span><span class="symbol">:/home/git/work/project</span>.git</span><br><span class="line"><span class="variable">$ </span>git push origin master</span><br></pre></td></tr></table></figure></span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </article>
 
 
-
     
-
   </section>
 
   
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/">&laquo;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">&raquo;</a>
+  </nav>
 
  </div>
 
@@ -355,12 +402,6 @@
   
   
   
-    <script type="text/javascript">
-      postMotionOptions = {stagger: 100, drag: true};
-    </script>
-  
-
-  
     
 
   
@@ -403,12 +444,6 @@
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
-
 
   <script type="text/javascript">
     $(document).ready(function () {

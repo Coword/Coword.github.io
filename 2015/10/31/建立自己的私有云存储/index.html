@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="cloud,linux," />
 
 
 
@@ -41,19 +41,31 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="操作系统：ubuntu 14.04软件平台：owncloud
+1.    预装环境软件 ownCloud 内核是用PHP5写的，支持SQLite、MySQL、Oracle以及PostgreSQL等数据库。本教程使用MySQL开源数据库。系统需要安装的软件如下：
+
+web 服务器：apache2
+php 安装包：php5, php5-gd, php-xml- parser,php5-intl
+数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/02/15/hello-world/index.html">
+<meta property="og:title" content="建立自己的私有云存储">
+<meta property="og:url" content="http://yoursite.com/2015/10/31/建立自己的私有云存储/index.html">
 <meta property="og:site_name" content="Coword's Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-02-15T02:43:11.795Z">
+<meta property="og:description" content="操作系统：ubuntu 14.04软件平台：owncloud
+1.    预装环境软件 ownCloud 内核是用PHP5写的，支持SQLite、MySQL、Oracle以及PostgreSQL等数据库。本教程使用MySQL开源数据库。系统需要安装的软件如下：
+
+web 服务器：apache2
+php 安装包：php5, php5-gd, php-xml- parser,php5-intl
+数据库">
+<meta property="og:updated_time" content="2015-10-31T13:54:11.262Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="建立自己的私有云存储">
+<meta name="twitter:description" content="操作系统：ubuntu 14.04软件平台：owncloud
+1.    预装环境软件 ownCloud 内核是用PHP5写的，支持SQLite、MySQL、Oracle以及PostgreSQL等数据库。本教程使用MySQL开源数据库。系统需要安装的软件如下：
+
+web 服务器：apache2
+php 安装包：php5, php5-gd, php-xml- parser,php5-intl
+数据库">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -63,7 +75,7 @@ Quick">
   };
 </script>
 
-  <title> Hello World | Coword's Blog </title>
+  <title> 建立自己的私有云存储 | Coword's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -191,7 +203,7 @@ Quick">
           
           
             
-              Hello World
+              建立自己的私有云存储
             
           
         </h1>
@@ -200,19 +212,34 @@ Quick">
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-02-15T10:43:11+08:00" content="2016-02-15">
-            2016-02-15
+          <time itemprop="dateCreated" datetime="2015-10-31T00:00:00+08:00" content="2015-10-31">
+            2015-10-31
           </time>
         </span>
 
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/服务器/" itemprop="url" rel="index">
+                  <span itemprop="name">服务器</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
         
 
         
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/02/15/hello-world/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/15/hello-world/" itemprop="commentsCount"></span>
+              <a href="/2015/10/31/建立自己的私有云存储/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/31/建立自己的私有云存储/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -226,31 +253,58 @@ Quick">
       
 
       
-        <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <span itemprop="articleBody"><p><strong>操作系统：ubuntu 14.04</strong><br><strong>软件平台：owncloud</strong></p>
+<h4 id="1-预装环境软件"><a href="#1-预装环境软件" class="headerlink" title="1.    预装环境软件"></a>1.    预装环境软件</h4><p> ownCloud 内核是用PHP5写的，支持SQLite、MySQL、Oracle以及PostgreSQL等数据库。本教程使用MySQL开源数据库。系统需要安装的软件如下：</p>
+<ul>
+<li>web 服务器：apache2</li>
+<li>php 安装包：php5, php5-gd, php-xml- parser,php5-intl</li>
+<li>数据库驱动：php5-mysql</li>
+<li>curl 安装包：curl, libcurl3, php5-curl</li>
+<li>smb 客户端：smbclient （挂载windows共享文件夹的）</li>
+<li>安装MySQL：mysql-server</li>
+</ul>
+<p>如果你的操作系统是Ubuntu/Debian的，可运行以下命令一键安装：<br><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">sudo apt-get <span class="operator"><span class="keyword">install</span> apache2 php5 php5-gd php-<span class="keyword">xml</span>-parser php5-intl php5-sqlite php5-mysql smbclient curl libcurl3 php5-curl mysql-<span class="keyword">server</span></span></span><br></pre></td></tr></table></figure></p>
+<p>注：安装过程需要输入MySQL的root用户密码</p>
+<h4 id="2-安装owncloud"><a href="#2-安装owncloud" class="headerlink" title="2. 安装owncloud"></a>2. 安装owncloud</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"># 下载<span class="operator"><span class="keyword">Release</span>.<span class="keyword">key</span></span><br><span class="line">$ wget -nv https://download.owncloud.org/download/repositories/<span class="number">8.2</span>/xUbuntu_14<span class="number">.04</span>/<span class="keyword">Release</span>.<span class="keyword">key</span> -O <span class="keyword">Release</span>.<span class="keyword">key</span></span><br><span class="line"># 把<span class="keyword">Release</span>.<span class="keyword">key</span>添加到本地trusted数据库中</span><br><span class="line">$ apt-<span class="keyword">key</span> <span class="keyword">add</span> - &lt; <span class="keyword">Release</span>.<span class="keyword">key</span></span><br><span class="line"># 调用sh编译</span><br><span class="line">$ sh -<span class="keyword">c</span> <span class="string">"echo 'deb http://download.owncloud.org/download/repositories/8.2/xUbuntu_14.04/ /' &gt;&gt; /etc/apt/sources.list.d/owncloud.list"</span></span><br><span class="line"># 更新</span><br><span class="line">$ apt-<span class="keyword">get</span> <span class="keyword">update</span></span><br><span class="line"># 安装owncloud（ubuntu默认安装在/<span class="keyword">var</span>/www/owncloud）</span><br><span class="line">$ apt-<span class="keyword">get</span> <span class="keyword">install</span> owncloud</span></span><br></pre></td></tr></table></figure>
+<h5 id="注：其他版本参考-https-download-owncloud-org-download-repositories-stable-owncloud"><a href="#注：其他版本参考-https-download-owncloud-org-download-repositories-stable-owncloud" class="headerlink" title="注：其他版本参考 https://download.owncloud.org/download/repositories/stable/owncloud/"></a>注：<a href="https://download.owncloud.org/download/repositories/stable/owncloud/" target="_blank" rel="external">其他版本参考</a> <a href="https://download.owncloud.org/download/repositories/stable/owncloud/" target="_blank" rel="external">https://download.owncloud.org/download/repositories/stable/owncloud/</a></h5><h4 id="3-环境配置"><a href="#3-环境配置" class="headerlink" title="3.    环境配置"></a>3.    环境配置</h4><p><strong>第1步：修改owncloud目录权限</strong><br>ownCloud需要对一些目录有写的权限，为此，web服务器用户必须要拥有apps、data、config目录的权限。<br><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor"># 修改权限</span></span><br><span class="line">$ cd /var/www/owncloud</span><br><span class="line">$ sudo chown -<span class="type">R</span> www-<span class="typedef"><span class="keyword">data</span>:www-<span class="keyword">data</span> <span class="keyword">data</span></span></span><br><span class="line">$ sudo chown -<span class="type">R</span> www-<span class="typedef"><span class="keyword">data</span>:www-<span class="keyword">data</span> config</span></span><br><span class="line">$ sudo chown -<span class="type">R</span> www-<span class="typedef"><span class="keyword">data</span>:www-<span class="keyword">data</span> apps</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>第2步：配置web服务器</strong><br>我们要为owncloud配置Apache服务器，owncloud需要启用Apache上.htaccess文件，.htaccess文件(或者”分布式配置文件”）提供了针对目录改变配置的方法。为了启用web服务器上的.htaccess，可以通过 Apache配置文件的 AllowOverride指令来设置。</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">$ <span class="keyword">vi</span> /etc/apache2/apache2.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure>
+<p>切换vi输入模式，修改配置文件如下：<br><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;Directory/var/www/&gt;</span></span><br><span class="line">        <span class="keyword"><span class="common">Options</span></span> Indexes</span><br><span class="line">        <span class="keyword">FollowSymLinks</span> MultiViews</span><br><span class="line">        <span class="keyword">AllowOverride</span> <span class="literal">All</span></span><br><span class="line">        <span class="keyword"><span class="common">Order</span></span> allow,deny</span><br><span class="line">        <span class="keyword"><span class="common">allow</span></span> from <span class="literal">all</span></span><br><span class="line"><span class="tag">&lt;/Directory&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>第3步：启动Apache的mod_rewrite模块</strong><br>mod_rewrite模块提供了实时地将访问者请求的静态URL地址映射为动态查询字符串的一种规则。<br><figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启用模块</span></span><br><span class="line"><span class="variable">$ </span>sudo a2enmod rewrite</span><br><span class="line"><span class="variable">$ </span>sudo a2enmod headers</span><br><span class="line"><span class="comment"># 重启apache服务生效</span></span><br><span class="line"><span class="variable">$ </span>sudo service apache2 restart</span><br></pre></td></tr></table></figure></p>
+<p><strong>第4步：配置mysql数据库</strong><br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor"># 登录mysql数据库，输入密码</span></span><br><span class="line">$ mysql -h <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> -u root -p</span><br><span class="line"><span class="preprocessor"># 创建数据库</span></span><br><span class="line">$ create database owncloud;</span><br><span class="line"><span class="preprocessor"># 查看数据库</span></span><br><span class="line">$ show databases;</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-运行"><a href="#4-运行" class="headerlink" title="4.    运行"></a>4.    运行</h4><p>在浏览器中打开 <a href="http://localhost/owncloud" target="_blank" rel="external">http://localhost/owncloud</a> ，你会被引导进入ownCloud的配置界面。<br>第1步：创建管理员用户。<br>在界面上输入用户名和密码。<br>第二步：连接数据库。<br>选择mysql数据库，输入MySQL的数据库名、用户名和密码。（数据库owncloud  用户root 密码为安装数据库时输入的）</p>
+<h4 id="5-静态ip添加（非必须）"><a href="#5-静态ip添加（非必须）" class="headerlink" title="5.    静态ip添加（非必须）"></a>5.    静态ip添加（非必须）</h4><p>不设置静态IP无法通过静态IP访问，也即通过<a href="http://192.168.1.200/owncloud（假设我的IP为192.168.1.200）无法访问owncloud。可通过修改owncloud配置文件解决。" target="_blank" rel="external">http://192.168.1.200/owncloud（假设我的IP为192.168.1.200）无法访问owncloud。可通过修改owncloud配置文件解决。</a><br><figure class="highlight vala"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor"># 打开配置文件</span></span><br><span class="line">$ vi /<span class="keyword">var</span>/www/owncloud/config/config.php</span><br><span class="line"><span class="preprocessor"># 输入i切换输入模式</span></span><br><span class="line"><span class="preprocessor"># 在array()内添加IP</span></span><br><span class="line"><span class="preprocessor"># 添加 1 =&gt; '192.168.1.200'</span></span><br><span class="line"><span class="preprocessor"># 保存退出</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="6-使用桌面同步客户端同步文件"><a href="#6-使用桌面同步客户端同步文件" class="headerlink" title="6. 使用桌面同步客户端同步文件"></a>6. 使用桌面同步客户端同步文件</h4><p>owncloud提供windows、mac 、linux、手机端客户端软件，安装很简单，在此就不再啰嗦。连接服务器地址填写 <a href="http://192.168.1.200/owncloud" target="_blank" rel="external">http://192.168.1.200/owncloud</a><br>注：<a href="https://owncloud.org/install/#install-clients" target="_blank" rel="external">客户端下载地址</a></p>
+<h4 id="7-公网访问（其实木有必要，私有云嘛）"><a href="#7-公网访问（其实木有必要，私有云嘛）" class="headerlink" title="7. 公网访问（其实木有必要，私有云嘛）"></a>7. 公网访问（其实木有必要，私有云嘛）</h4><p>上述搭建的owncloud服务器是基于局域网的，换句话说，就是在局域网才能访问。要想通过外网访问，必须做路由器端口映射或者挂上自己云主机。端口映射方式成本比较低，可用花生壳软件做映射，不过近几年来花生壳越来越坑了，不给钱估计就只剩下壳了（不稳定，几分钟掉一次线）。如果知道自己公网IP(可通过网络查询，但不一定能用，ping测试一下)，可直接做路由器映射，但是必须具有路由器管理权限；云主机方式成本较高，需要有云主机（最低配置也得几十刀一个月，流量也就10来g，流的都是血啊）。<br>端口映射方式（路由器）：</p>
+<pre><code>1. 获取IP（http://www.ip138.com/），ping 测试一下，不通就木有办法了。或者打10000调戏妹子问去（PS：据说可以，但是木有试过）。
+2. 登录路由器（http://192.168.1.1/）
+3. 在转发规则下的虚拟服务器下添加映射条目（填写好端口号和公网IP）
+4. 重启一下路由就ok 了
+</code></pre><p>云主机方式：<br>    把上面的步骤在自己的云主机ECS上重新做一遍，只有在第4步添加IP不一样而已，把公网ip加入owncloud的配置文件（/var/www/owncloud/config/config.php）就ok了，不过得注意防火墙拦路虎（Ubuntu默认关闭防火墙，或者压根就木有）。</p>
 </span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/cloud/" rel="tag">#cloud</a>
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2015/11/01/Linux搭建git服务器/" rel="prev">linux搭建git服务器</a>
+            
           </div>
 
           <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/11/01/Linux搭建git服务器/" rel="next">linux搭建git服务器</a>
             
           </div>
         </div>
@@ -275,8 +329,8 @@ Quick">
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2016/02/15/hello-world/"
-                   data-title="Hello World" data-url="http://yoursite.com/2016/02/15/hello-world/">
+              <div class="ds-thread" data-thread-key="2015/10/31/建立自己的私有云存储/"
+                   data-title="建立自己的私有云存储" data-url="http://yoursite.com/2015/10/31/建立自己的私有云存储/">
               </div>
             
           </div>
@@ -375,7 +429,7 @@ Quick">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-预装环境软件"><span class="nav-number">1.</span> <span class="nav-text">1.    预装环境软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-安装owncloud"><span class="nav-number">2.</span> <span class="nav-text">2. 安装owncloud</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#注：其他版本参考-https-download-owncloud-org-download-repositories-stable-owncloud"><span class="nav-number">2.1.</span> <span class="nav-text">注：其他版本参考 https://download.owncloud.org/download/repositories/stable/owncloud/</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-环境配置"><span class="nav-number">3.</span> <span class="nav-text">3.    环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-运行"><span class="nav-number">4.</span> <span class="nav-text">4.    运行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-静态ip添加（非必须）"><span class="nav-number">5.</span> <span class="nav-text">5.    静态ip添加（非必须）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-使用桌面同步客户端同步文件"><span class="nav-number">6.</span> <span class="nav-text">6. 使用桌面同步客户端同步文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-公网访问（其实木有必要，私有云嘛）"><span class="nav-number">7.</span> <span class="nav-text">7. 公网访问（其实木有必要，私有云嘛）</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
