@@ -189,8 +189,8 @@
           
           
             
-              <a class="post-title-link" href="/2016/02/15/hello-world/" itemprop="url">
-                Hello World
+              <a class="post-title-link" href="/2016/03/19/mysql之基础知识总结/" itemprop="url">
+                mysql之基础知识总结
               </a>
             
           
@@ -200,19 +200,34 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-02-15T10:43:11+08:00" content="2016-02-15">
-            2016-02-15
+          <time itemprop="dateCreated" datetime="2016-03-19T00:00:00+08:00" content="2016-03-19">
+            2016-03-19
           </time>
         </span>
 
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/mysql/" itemprop="url" rel="index">
+                  <span itemprop="name">mysql</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
         
 
         
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/02/15/hello-world/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/15/hello-world/" itemprop="commentsCount"></span>
+              <a href="/2016/03/19/mysql之基础知识总结/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/19/mysql之基础知识总结/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -227,16 +242,243 @@
 
       
         
-          <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-</span>
+          <span itemprop="articleBody"><h3 id="mysql之基础知识总结"><a href="#mysql之基础知识总结" class="headerlink" title="mysql之基础知识总结"></a>mysql之基础知识总结</h3><h4 id="连接方式-java"><a href="#连接方式-java" class="headerlink" title="连接方式(java)"></a>连接方式(java)</h4><pre><code>driver:&quot;jdbc:mysql://localhost:3306/db_name&quot;
+url:&quot;com.mysql.jdbc.Driver&quot;    
+</code></pre><h4 id="表操作-create-drop-alter"><a href="#表操作-create-drop-alter" class="headerlink" title="表操作(create/drop/alter)"></a>表操作(create/drop/alter)</h4><pre><code>//创建
+create table table_name(
+    prop_name type，
+    ...
+);
+
+//删除
+drop table table_name;
+
+//修改
+//修改表名
+alter table table_oldname rename table_newname;
+//最后位置增加字段
+alter table table_name add prop_name type;
+//首位置增加字段
+alter table table_name add prop_name type first;
+//指定位置增加字段
+alter table table_name add prop_name type after prop_name1;
+//修改字段顺序
+alter table table_name modify prop_name1 type first|after prop_name2;
+//删除字段
+alter table table_name drop prop_name;
+//修改字段数据类型
+alter table table_name modify prop_name type;
+//修改字段名和数据类型
+alter table table_name change prop_oldname prop_newname oldtype|newtype;
+
+//查询
+show/desc table_name
+//通过系统表查看
+
+//约束
+    not null            //约束字段不能为空
+    default                //设置字段默认值
+    unique key(UK)        //设置字段值唯一
+    primary key(PK)        //设置主键
+    foreign key(FK)        //外键
+    auto_increment        //字段值自动增加
+
+//设置非空约束    
+create table table_name(
+    prop_name type not null，
+    ...
+);
+//设置字段默认值    
+create table table_name(
+    prop_name type default value，
+    ...
+);
+//设置唯一约束
+create table table_name(
+    prop_name type unique，
+    ...
+);
+//设置主键约束(单主键)
+create table table_name(
+    prop_name type primary key，    //单字段主键
+    ...
+);
+//设置主键约束    （多主键）
+create table table_name(
+    prop_name type,
+    ...
+    constraint primary    key(属性名,属性名...)
+);
+//设置字段值字段增加    
+create table table_name(
+    prop_name type auto_increment，
+    ...
+);
+//设置外键约束
+create table table_name(
+    prop_name type,
+    ...
+    constraint 外键约束名 foreign key(prop_childname)    
+        references 表名(prop_fathername)                    
+);
+</code></pre><h4 id="索引操作"><a href="#索引操作" class="headerlink" title="索引操作"></a>索引操作</h4><pre><code>//创建表时创建普通索引
+create table table_name(
+    prop_name type,
+    ...
+    index|key index_name(prop_name [indexlength] [asc|desc])
+);
+//存在表时创建普通索引
+create index index_name on table_name(prop_name [indexlength] [asc|desc]);
+alter table table_name add index|key index_name(prop_name [indexlength] [asc|desc]);
+
+//创建唯一索引（唯一性）
+create table table_name(
+    prop_name type,
+    ...
+    unique index|key index_name(prop_name [indexlength] [asc|desc])
+);
+//存在表时创建唯一索引（参上）
+
+// 创建全文索引（快速查询数据量大的字符串类型）
+create table table_name(
+    prop_name type,
+    ...
+    fulltext index|key index_name(prop_name [indexlength] [asc|desc])
+);
+//创建多列索引
+create table table_name(
+    prop_name type,
+    ...
+    index|key index_name(prop_name [indexlength] [asc|desc], ...)
+);
+//删除索引
+drop index index_name;
+//修改索引（先删除再创建）
+
+//查询索引
+show create table table_name \G;
+//校验
+explain select * from t_dept where prop_name = 1;
+</code></pre><h4 id="视图操作"><a href="#视图操作" class="headerlink" title="视图操作"></a>视图操作</h4><pre><code>//创建视图
+create view view_name as select...;
+//删除视图
+drop view view_name;
+//修改视图
+alter view view_name as select...;
+//查询视图
+show create view view_name;
+desc view_name;
+//通过系统表查看
+</code></pre><h4 id="触发器操作"><a href="#触发器操作" class="headerlink" title="触发器操作"></a>触发器操作</h4><pre><code>//创建
+create trigger trigger_name before|after trigger_EVENT on table_name for each row trigger_sql;
+create trigger trigger_name before|after trigger_EVENT on table_name for each row 
+    begin 
+        trigger_sql,
+        ...
+    end
+//删除
+drop trigger trigger_name;
+//查看
+show triggers \G;
+//通过系统表查看
+use information_schema;
+select * from triggers \G;
+</code></pre><h4 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h4><pre><code>//插入完整或部分记录
+insert into table_name(col_name1, col_name2...)values(value1, value2...);
+//插入多条记录
+insert into table_name(col_name1, col_name2...)values(value1, value2...),
+    values(value1, value2...),
+    values(value1, value2...);
+//插入查询记录
+insert into table_name(col_name1, col_name2...)
+    select (col_name1, col_name2...) from table_name where...
+//更新数据
+update table_name set col_name1 = value1, col_name2 = value2..., where...;
+//删除数据
+delete from table_name where...;
+//清空表中数据（truncate相当于保留mysql表的结构，重新创建了这个表，效率高，不可恢复）
+delete from table_name;
+truncate table table_name;
+//查询
+//简单查询
+select col_name1, col_name2... from table_name;
+select * from table_name;
+//去除重复
+select distinct col_name1, col_name2... from table_name;
+//设置显示格式
+select concat(col_name1, &apos;str&apos;, col_name2) col_name2 from table;
+//条件查询
+select * from table_name where...;
+select * from table_name where condition1 and condition2;
+select * from table_name 
+//范围查询
+select * from table_name where col_name [not] between value1 and value2;
+//集合查询
+select * from table_name where col_name [not] in(value1, value2...);
+//模块查询（%匹配多个字符|_匹配单个字符）
+select * from table_name where col_name [not] like &apos;str%&apos;;
+select * from table_name where col_name [not] like &apos;str_&apos;;
+//排序(asc 升序|desc 降序)
+select * from table_name where col_name1 order by [asc|desc][, col_name2 order by [asc|desc]]
+//统计（count()|avg()|sum()|max()|min()）
+select count(col_name) from table_name...;
+...
+//分组查询
+select * from table_name where condition group by col_name;
+//多表查询（内外连接）
+//并(union all不去除重复)
+select col_name1... from table_name1 union|union all select col_name2 from table_name2...
+//笛卡尔积（记录数为多表相乘）
+//内连接（笛卡尔积数据记录中，保留所有匹配记录，舍弃不匹配）
+select col_name1... from table_name1 inner join table_name2 [inner join table_nameN] on|where condition; //貌似用where速度更快
+select aliases_name1.col_name1, aliases_name2.col_name1 from table_name1 aliases_name1 inner join table_name2 [aliases_name2] [inner join table_nameN] on|where condition;
+    //自然连接（笛卡尔积数据记录中根据表关系中相同名称的字段自动进行记录匹配，去掉重复字段）
+    //等值连接（笛卡尔积数据记录中，选择所匹配字段值相等的记录，不会去掉重复）
+    //不等连接（笛卡尔积数据记录中，选择所匹配字段值不相等的记录，不会去掉重复）
+//外连接（笛卡尔积数据记录中，不仅保留所有匹配记录，还保留部分不匹配的数据记录）
+select col_name... from table_name left|right|full [outer] join table_name2 where|on condition
+    //左外连接（还包含关联左表中不匹配的数据记录）
+    //左外连接（还包含关联右表中不匹配的数据记录）
+    //全外连接（还包含关联左右表中不匹配的数据记录）
+</code></pre><h4 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h4><pre><code>//创建存储过程的形式
+//proce_paramter格式：[in|out\inout] paramter_name type
+//characteristic取值：language sql|...
+create procedure proce_name([proce_paramter [,...]]) [characteristic] proce_sql;
+//创建简单存储过程
+create procedure proce_name()
+commit &apos;note&apos;
+Begin
+    proce_sql
+    ...
+end$$
+delimiter;
+//修改
+alter procedure proce_name...
+//删除
+drop procedure proce_name;
+//查看
+show procedure status [like &apos;pattern&apos;] \G;
+//查看系统表
+use information_schema;
+select * from routines \G;
+
+show create procedure proce_name;
+</code></pre><h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><pre><code>//创建函数
+//func_paramter格式：paramter_name type
+//characteristic取值：language sql|...
+create function func_name([func_paramter [,...]]) [characteristic] func_sql;
+//修改
+alter function func_name...;
+//删除
+drop function func_name;
+//查看
+show function status [like &apos;pattern&apos;] \G;
+//查看系统表
+use information_schema;
+select * from routines \G;
+
+show create function func_name;
+</code></pre></span>
         
       
     </div>
@@ -300,14 +542,14 @@
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
